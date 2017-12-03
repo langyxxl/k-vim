@@ -17,7 +17,7 @@ filetype off " required! turn off
 " inspired by spf13, 自定义需要的插件集合
 if !exists('g:bundle_groups')
     " let g:bundle_groups=['python', 'javascript', 'golang', 'php', 'ruby', 'shell', 'markdown', 'html', 'css', 'less', 'coffeescript', 'tmux', 'json', 'beta']
-    let g:bundle_groups=['python', 'javascript', 'markdown', 'html', 'css', 'tmux', 'beta']
+    let g:bundle_groups=['python', 'javascript', 'markdown', 'html', 'css', 'golang']
 endif
 
 " ----------------------------------------------------------------------------
@@ -26,7 +26,9 @@ endif
 " ----------------------------------------------------------------------------
 
 call plug#begin('~/.vim/bundle')
-
+Plug 'vim-erlang/erlang-motions.vim'
+Plug 'vim-erlang/vim-erlang-omnicomplete'
+Plug 'vim-erlang/vim-erlang-tags'
 " 移动光标到插件名上, 使用'#'快速跳转到每个插件的配置处
 
 " syntastic
@@ -742,6 +744,7 @@ endif
 
     " nerdtreetabs
     map <Leader>n <plug>NERDTreeTabsToggle<CR>
+    map <Leader>e :NERDTreeFind<CR>
     " 关闭同步
     " let g:nerdtree_tabs_synchronize_view=0
     " let g:nerdtree_tabs_synchronize_focus=0
@@ -893,3 +896,5 @@ endif
 " }}}
 
 "------------------------------------------- end of configs --------------------------------------------
+autocmd BufRead,BufNewFile *.erl,*.es.*.hrl,*.yaws,*.xrl set expandtab
+au BufNewFile,BufRead *.erl,*.es,*.hrl,*.yaws,*.xrl setf erlang
