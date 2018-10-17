@@ -27,6 +27,7 @@ endif
 
 call plug#begin('~/.vim/bundle')
 Plug 'elixir-editors/vim-elixir'
+Plug 'vim-erlang/vim-erlang-skeletons'
 Plug 'vim-erlang/erlang-motions.vim'
 Plug 'vim-erlang/vim-erlang-omnicomplete'
 Plug 'vim-erlang/vim-erlang-tags'
