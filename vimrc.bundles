@@ -26,11 +26,17 @@ endif
 " ----------------------------------------------------------------------------
 
 call plug#begin('~/.vim/bundle')
+Plug 'dhruvasagar/vim-table-mode'
+Plug 'mmorearty/elixir-ctags'
+Plug 'slashmili/alchemist.vim'
 Plug 'elixir-editors/vim-elixir'
 Plug 'vim-erlang/erlang-motions.vim'
 Plug 'vim-erlang/vim-erlang-omnicomplete'
-Plug 'vim-erlang/vim-erlang-tags'
+Plug 'vim-erlang/vim-erlang-omnicomplete'
+Plug 'dkuhlman/vim-erlang-skeletons'
 " 移动光标到插件名上, 使用'#'快速跳转到每个插件的配置处
+
+"Plug 'nvie/vim-flake8'
 
 " syntastic
 if v:version < 800
@@ -900,3 +906,5 @@ endif
 autocmd BufRead,BufNewFile *.erl,*.es.*.hrl,*.yaws,*.xrl set expandtab
 au BufNewFile,BufRead *.erl,*.es,*.hrl,*.yaws,*.xrl setf erlang
 set wrap
+let g:table_mode_corner_corner='+'
+let g:table_mode_header_fillchar='='
