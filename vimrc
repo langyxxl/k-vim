@@ -691,5 +691,12 @@ let g:tagbar_type_elixir = {
         \ 'p:protocols',
         \ 'r:records',
         \ 't:tests'
-    \ ]
-\ }
+    \ ],
+    \ 'sro' : '.',
+    \ 'kind2scope' : {
+        \ 'm' : 'module'
+    \ },
+    \ 'scope2kind' : {
+        \ 'module' : 'm'
+    \ }
+    \ }
